@@ -41,9 +41,9 @@ const DEFAULT_NAME = 'airbnb-austin-data';
 var discoveryDocs = [];
 const fs = require('fs');
 const path = require('path');
-var arrayOfFiles = fs.readdirSync('./data/airbnb/');
+var arrayOfFiles = fs.readdirSync('./data/airbnb/austin/');
 arrayOfFiles.forEach(function(file) {
-  discoveryDocs.push(path.join('./data/airbnb/', file));
+  discoveryDocs.push(path.join('./data/airbnb/austin/', file));
 });
 // shorten the list if we are loading - trail version of IBM Cloud 
 // is limited to 256MB application size, so use this if you get
@@ -51,7 +51,7 @@ arrayOfFiles.forEach(function(file) {
 discoveryDocs = discoveryDocs.slice(0,300);
 
 const discovery = new DiscoveryV1({
-  version: '2018-04-20'
+  version: '2018-12-03'//'2018-04-20'
 });
 
 // make our discovery queries promise functions

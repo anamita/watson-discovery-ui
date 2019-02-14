@@ -6,16 +6,12 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/IBM/watson-discovery-ui.git"
+    "url": ""
   },
   "scripts": {
     "start": "node --max_old_space_size=256 app.js",
     "start:watch": "nodemon app.js",
-    "bootstrap": "cp env.sample .env",
-    "test -u": "jest -u",
-    "test": "jest",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "bootstrap": "cp env.sample .env"
   },
   "dependencies": {
     "@babel/cli": "^7.2.0",

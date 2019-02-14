@@ -27,7 +27,7 @@ module.exports = {
     const params = Object.assign({
       environment_id: this.environment_id,
       collection_id: this.collection_id,
-      aggregation: 'timeslice(date,1month).average(enriched_text.sentiment.document.score)'
+      aggregation: 'timeslice(date,7day).average(enriched_text.sentiment.document.score)'
     }, queryOpts);
 
     console.log('Discovery Trending Query Params: ');
